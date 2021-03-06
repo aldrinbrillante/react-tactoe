@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+
+.squares {
+    background: #272727;
+    border: none;
+    font-size: 5rem;
+    /* font-weight: 800; */
+    cursor: pointer;
+    outline: none;
+  }
+
+  .X {
+    color: rgb(3, 248, 248);
+  }
+  .O {
+    color: rgb(191, 57, 224);
+  }
