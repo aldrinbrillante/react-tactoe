@@ -27,7 +27,21 @@ const Game = () => {
         setXisNext(!xIsNext);
     };
 
-    const renderMoves = ()
+    const renderMoves = () =>
+        history.map((_step, move) => {
+            const destination = move ? `Go to move #${move}` : "Go to Start";
+            return (
+                <li key={move}>
+                    <button onClick={() => jumpTo(move)}>{destination}</button>
+                </li>
+            );
+    });
+
+    const jumpTo = (step) => {
+        setStepNumber(step);
+        setXisNext(step % 2 === 0);
+    };
+    
 
     return (
         <>
@@ -36,8 +50,6 @@ const Game = () => {
             <div className="info-wrapper">
 
             </div>
-
-            <h3>History</h3>
 
         </>
     );
