@@ -16,3 +16,13 @@
   .O {
     color: rgb(191, 57, 224);
   }
+
+  .board {
+    border: 1rem solid #b47c03;
+    background: #ff652f;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    gap: 1rem;
+  }
