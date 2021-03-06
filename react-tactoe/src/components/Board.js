@@ -8,3 +8,5 @@ const Board = ({ squares, onClick }) => (
     ))}
   </div>
 );
+
+export default Board;

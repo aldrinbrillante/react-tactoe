@@ -6,13 +6,12 @@ import Board from "./Board";
 const Game = () => {
     //initial state of an array with 9 values
     const [history, setHistory] = useState([Array(9).fill(null)]);
-
     const [stepNumber, setStepNumber] = useState(0);
     const [xIsNext, setXisNext] = useState(true);
     const winner = calculateWinner(history[stepNumber]);
     const xO = xIsNext ? "X" : "O";
 
-    const handleCLick =(i) => {
+    const handleClick =(i) => {
         const historyPoint = history.slice(0, stepNumber +1);
         const current = historyPoint[stepNumber];
         const squares= [...current];
@@ -59,3 +58,5 @@ const Game = () => {
         </>
     );
 };
+
+export default Game;
